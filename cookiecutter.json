@@ -1,0 +1,6 @@
+{
+    "project_name": "",
+    "description": "",
+    "description_project_run": "python3 main.py",
+    "python_version": ["python3.9", "python3.11"]
+}

@@ -1,0 +1,24 @@
+repos:
+-   repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v4.0.1
+    hooks:
+      - id: 'no-commit-to-branch'
+        args: ['--branch', 'master']
+-   repo: https://github.com/ambv/black
+    rev: 21.5b2
+    hooks:
+    - id: black
+      language_version: python3.8
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    - id: flake8
+      additional_dependencies: [flake8-docstrings==1.6.0]
+-   repo: local
+    hooks:
+    - id: test
+      name: test
+      entry: bash -c "./run_unittest 'mlops_project'"
+      language: system
+      types: [python]
+      verbose: true
